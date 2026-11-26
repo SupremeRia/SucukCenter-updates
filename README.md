@@ -1,23 +1,21 @@
 # SucukCenter — Windows kurulumları ve güncellemeler
 
-Bu depo yalnız son kullanıcı kurulum dosyaları, güncelleme bilgileri ve sürüm notları içindir. Uygulamanın kaynak kodları ayrı bir özel depoda tutulur; buraya kaynak kodu veya kaynak geçmişi kopyalanmaz. Buradaki otomatik “Source code” arşivleri yalnız bu tanıtım dosyasını içerir.
+Bu depo yalnız kurulum dosyaları, güncelleme metaverileri ve sürüm notları içindir. Kaynak kod ayrı bir private depodadır. Otomatik Source code ZIP/TAR arşivleri yalnız bu README'yi içerir; kurulum dosyası değildir.
 
-[Kurulum ve sürüm notları](https://github.com/SupremeRia/SucukCenter-updates/releases)
+## Güncel sürüm: 1.10.0
 
-## İndirme ve ilk geçiş
+[Tam kurulum / yerinde yükseltme EXE](https://github.com/SupremeRia/SucukCenter-updates/releases/download/v1.10.0/SucukCenter-1.10.0-Kurulum.exe) · [Sürüm notları ve tüm dosyalar](https://github.com/SupremeRia/SucukCenter-updates/releases/tag/v1.10.0)
 
-[**SucukCenter-1.10.0-rc.2-RiaCoding-Kurulum.exe**](https://github.com/SupremeRia/SucukCenter-updates/releases/download/v1.10.0-rc.2/SucukCenter-1.10.0-rc.2-RiaCoding-Kurulum.exe) hem tam kurulum hem güncelleyicisi olmayan eski sürüm için bir defalık yerinde geçiş paketidir. Eski uygulamada güvenli yedek alın, normal kapatın; kaldırmadan aynı konuma kurun. Node.js veya ayrı veritabanı kurulması gerekmez. “Source code” ZIP'i kurulum değildir.
-
-**1.10.0-rc.2 kararlı uygulama içi güncelleme kanalında görünmez.** Hesap, form, liste ve çökme sonrası kurtarma düzeltmelerini içerir; ayrıntılar Release notlarındadır.
-
-Bu ön sürüm yerel RiaCoding test sertifikası taşır; güvenilir üretim imzası değildir. Windows SmartScreen uyarısının kalkması vaat edilmez. Windows korumasını kapatmayın veya test kökü yüklemeyin. Güvenilir üretim sertifikası ve izole Windows test ortamı olmadığından iki kurulu sürüm arasında fiziksel otomatik güncelleme testi tamamlanmadı.
+1.10.0-rc.1/rc.2'den **bir defalık manuel geçiş** gerekir: uygulamadan doğrulanmış yedek alın, normal kapatın, kaldırmadan aynı konuma bu EXE'yi kurun. Eski istemcinin Windows sertifika şartı ve yeni yayın anahtarını bilmemesi uzaktan değiştirilemez. Node.js veya veritabanı sunucusu gerekmez.
 
 ## Uygulama içi güncelleme
 
-Ayarlar → Güncellemeler → **Güncellemeleri kontrol et** → **İndir** → **Güncelle ve yeniden başlat**. İndirme ve kurulum kullanıcı seçimiyle başlar; internet yokken temel işlevler çalışır. Yalnız eksiksiz kararlı sürümler sunulur; ön sürümler normal kullanıcılara önerilmez. Dosya özeti ve Windows tarafından güvenilen yayıncı imzası doğrulanmadan kurulum yapılmaz; yerel test imzası kabul edilmez.
+1.10.0 ve sonrasında Ayarlar → Güncellemeler → Güncellemeleri kontrol et → İndir → Güncelle ve yeniden başlat. Uygulama eksiksiz ve daha yeni kararlı sürümleri bulur, indirir, doğrular ve kullanıcı seçimiyle kurulumunu başlatır. Ön sürümler normal kullanıcılara önerilmez. Kullanıcının seçimi olmadan indirme/normal çıkışta kurulum yapılmaz.
 
-Kaydedilmemiş form varsa forma dönüp kaydedebilir, vazgeçebilir veya kaydetmeden güncellemeyi seçebilirsiniz. Devam eden kayıt/yedek/geri yükleme sırasında kurulum başlamaz. Kurulumdan önce doğrulanmış veri yedeği oluşturulur ve kayıtlar güvenle kapatılır. Sihirbaz iptal edilirse mevcut uygulamayı normal kısayolundan açın.
+Güvenilir Windows kod sertifikası gerekmez. Güncelleme imzası, uygulamaya gömülü sabit Ed25519 yayın anahtarıyla doğrulanır. İmza; uygulama/depo, sürüm, EXE adı, boyut ve SHA-512 değerini bağlar. Yalnız hash karşılaştırması yeterli sayılmaz. Eksik/sahte imza ve değiştirilmiş paket engellenir; yeni anahtar ağdan alınmaz.
 
-Kayıtlar Windows'un belirlediği Belgeler/SucukCenter klasöründeki yerel SQLite dosyasındadır. Güncelleme kaynağı müşteri kayıtlarına, veritabanına veya kaynak depoya erişim gerektirmez; uygulamaya GitHub token gömülmez. Eski programı yeni veritabanı şemasına zorlamayın; eski sürüme dönüşte uyumlu uygulama ve geçiş öncesi doğrulanmış yedek birlikte kullanılmalıdır.
+Bu EXE'de Windows Authenticode sertifikası yoktur. Windows güvenlik/SmartScreen uyarıları ayrıca çıkabilir; uygulama Windows korumalarını değiştirmez. İlk manuel paketin güveni, henüz yeni anahtarı taşımayan eski istemcide otomatik doğrulanmış sayılamaz. Gerçek iki kurulu Windows sürümü arası NSIS yükseltmesi izole ortam olmadığı için henüz doğrulanmadı; ağ indirme ve veri uyum testleri bunun yerine sayılmaz.
 
-Her Release'te EXE, EXE.blockmap, latest.yml ve SHA256SUMS.txt birlikte yayınlanır. SHA özeti yayıncı imzasının yerine geçmez. Veritabanı, müşteri verisi, yedek, parola veya özel anahtar bu depoya eklenmez.
+Güncelleme öncesi doğrulanmış geri dönüş yedeği, açık form/kayıt kontrolü ve güvenli veritabanı kapatma uygulanır. Kayıtlar Windows Belgeler/SucukCenter klasöründedir; işletme verileri güncelleme kaynağına gönderilmez. Uygulamaya GitHub token veya özel yayın anahtarı gömülmez.
+
+Her yeni release EXE, EXE.blockmap, latest.yml, SHA256SUMS.txt ve release-signature.json içerir. Müşteri verisi, SQLite dosyası, yedek, parola veya özel anahtar bu depoya eklenmez.
