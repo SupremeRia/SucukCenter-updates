@@ -2,9 +2,11 @@
 
 Bu depo yalnız kurulum dosyaları, güncelleme metaverileri ve sürüm notları içindir. Kaynak kod ayrı bir private depodadır. Otomatik Source code ZIP/TAR arşivleri yalnız bu README'yi içerir; kurulum dosyası değildir.
 
-## Güncel sürüm: 1.10.0
+## Güncel sürüm: 1.10.1
 
-[Tam kurulum / yerinde yükseltme EXE](https://github.com/SupremeRia/SucukCenter-updates/releases/download/v1.10.0/SucukCenter-1.10.0-Kurulum.exe) · [Sürüm notları ve tüm dosyalar](https://github.com/SupremeRia/SucukCenter-updates/releases/tag/v1.10.0)
+1.10.1, 1.10.0 ile aynı uygulama kodunu içerir; yalnız sürüm numarası uygulama içi güncellemeyi denemek için artırılmıştır.
+
+[Tam kurulum / yerinde yükseltme EXE](https://github.com/SupremeRia/SucukCenter-updates/releases/download/v1.10.1/SucukCenter-1.10.1-Kurulum.exe) · [Sürüm notları ve tüm dosyalar](https://github.com/SupremeRia/SucukCenter-updates/releases/tag/v1.10.1)
 
 1.10.0-rc.1/rc.2'den **bir defalık manuel geçiş** gerekir: uygulamadan doğrulanmış yedek alın, normal kapatın, kaldırmadan aynı konuma bu EXE'yi kurun. Eski istemcinin Windows sertifika şartı ve yeni yayın anahtarını bilmemesi uzaktan değiştirilemez. Node.js veya veritabanı sunucusu gerekmez.
 
