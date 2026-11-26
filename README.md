@@ -6,7 +6,9 @@ Bu depo yalnız son kullanıcı kurulum dosyaları, güncelleme bilgileri ve sü
 
 ## İndirme ve ilk geçiş
 
-**SucukCenter-1.10.0-rc.1-RiaCoding-Kurulum.exe** hem tam kurulum hem güncelleyicisi olmayan eski sürüm için bir defalık yerinde geçiş paketidir. Eski uygulamada güvenli yedek alın, normal kapatın; kaldırmadan aynı konuma kurun. Node.js veya ayrı veritabanı kurulması gerekmez. “Source code” ZIP'i kurulum değildir.
+[**SucukCenter-1.10.0-rc.2-RiaCoding-Kurulum.exe**](https://github.com/SupremeRia/SucukCenter-updates/releases/download/v1.10.0-rc.2/SucukCenter-1.10.0-rc.2-RiaCoding-Kurulum.exe) hem tam kurulum hem güncelleyicisi olmayan eski sürüm için bir defalık yerinde geçiş paketidir. Eski uygulamada güvenli yedek alın, normal kapatın; kaldırmadan aynı konuma kurun. Node.js veya ayrı veritabanı kurulması gerekmez. “Source code” ZIP'i kurulum değildir.
+
+**1.10.0-rc.2 kararlı uygulama içi güncelleme kanalında görünmez.** Hesap, form, liste ve çökme sonrası kurtarma düzeltmelerini içerir; ayrıntılar Release notlarındadır.
 
 Bu ön sürüm yerel RiaCoding test sertifikası taşır; güvenilir üretim imzası değildir. Windows SmartScreen uyarısının kalkması vaat edilmez. Windows korumasını kapatmayın veya test kökü yüklemeyin. Güvenilir üretim sertifikası ve izole Windows test ortamı olmadığından iki kurulu sürüm arasında fiziksel otomatik güncelleme testi tamamlanmadı.
 
